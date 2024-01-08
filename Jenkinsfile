@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Docker 02') {
+      steps {
+        sh 'sudo docker run --name limpiaDevC --detach --privileged --network bridge --publish 2050:80 dev_limpia_net_net:01'
+      }
+    }
+
   }
 }
